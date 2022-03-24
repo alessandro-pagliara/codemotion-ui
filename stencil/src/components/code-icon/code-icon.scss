@@ -1,0 +1,28 @@
+:host {
+  @apply code-block;
+  @apply code-h-6 code-w-6;
+}
+
+svg {
+  @apply code-h-full code-w-full;
+}
+
+.clickable {
+  @apply code-cursor-pointer;
+}
+
+use {
+  @apply code-transition-all;
+
+  &.stroke-primary {
+    @apply code-text-primary #{!important};
+  }
+
+  &.stroke-secondary {
+    @apply code-text-secondary #{!important};
+  }
+
+  &.stroke-danger {
+    @apply code-text-danger #{!important};
+  }
+}

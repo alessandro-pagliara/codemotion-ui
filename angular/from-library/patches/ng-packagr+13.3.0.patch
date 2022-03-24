@@ -1,0 +1,26 @@
+diff --git a/node_modules/ng-packagr/lib/styles/stylesheet-processor.js b/node_modules/ng-packagr/lib/styles/stylesheet-processor.js
+index 29fd8a9..a95f82c 100644
+--- a/node_modules/ng-packagr/lib/styles/stylesheet-processor.js
++++ b/node_modules/ng-packagr/lib/styles/stylesheet-processor.js
+@@ -32,6 +32,10 @@ const postcss_url_1 = __importDefault(require("postcss-url"));
+ const esbuild_executor_1 = require("../esbuild/esbuild-executor");
+ const cache_1 = require("../utils/cache");
+ const log = __importStar(require("../utils/log"));
++
++// Import Tailwind
++const tailwindcss = require("tailwindcss");
++
+ var CssUrl;
+ (function (CssUrl) {
+     CssUrl["inline"] = "inline";
+@@ -138,6 +142,10 @@ class StylesheetProcessor {
+             autoprefixer: true,
+             stage: 3,
+         }));
++
++        // Add Tailwind to PostCSS plugins
++        postCssPlugins.push(tailwindcss());
++
+         return (0, postcss_1.default)(postCssPlugins);
+     }
+     async renderCss(filePath, css) {

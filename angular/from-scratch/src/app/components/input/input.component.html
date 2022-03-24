@@ -1,0 +1,56 @@
+<!-- input container -->
+<div
+  class="input-container"
+  [ngClass]="{
+    'has-focus': hasFocus,
+    'has-value': hasValue(),
+    'has-error': error,
+    'is-over': isOver,
+    'disabled': disabled
+  }"
+  #containerRef
+>
+  <!-- outline -->
+  <div class="input-outline">
+    <div class="input-outline-start"></div>
+    <div class="input-outline-gap"></div>
+    <div class="input-outline-end"></div>
+  </div>
+
+  <div class="input-outline thick">
+    <div class="input-outline-start"></div>
+    <div class="input-outline-gap"></div>
+    <div class="input-outline-end"></div>
+  </div>
+
+  <!-- infix -->
+  <div class="input-infix">
+    <!-- input -->
+    <input
+      [disabled]="disabled"
+      [placeholder]="_placeholder"
+      [type]="getInputType()"
+      [value]="value"
+      (input)="onInput($any($event))"
+      (blur)="onBlur($any($event))"
+      (focus)="onFocus($any($event))"
+      (mouseover)="onMouseOver()"
+      (mouseout)="onMouseOut()"
+    />
+
+    <!-- label -->
+    <label #labelRef>{{ label }}</label>
+  </div>
+
+  <!-- password icon -->
+  <div *ngIf="isPassword" class="password-icon" (click)="togglePasswordVisibility()">
+    <svg>
+      <use [attr.xlink:href]="spritePath + '#code-' + passwordIcon"></use>
+    </svg>
+  </div>
+</div>
+
+<!-- error message -->
+<div class="error-message" [class.show]="error && (errorMessage || '').length > 0">
+  {{ errorMessage }}
+</div>

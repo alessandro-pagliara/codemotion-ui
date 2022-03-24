@@ -1,0 +1,43 @@
+@import 'tailwind';
+
+:host {
+  @apply code-block;
+  @apply code-h-12;
+}
+
+button[type] {
+  @apply code-border-0 code-rounded code-h-full code-w-full code-px-2 code-py-2;
+  @apply code-bg-primary code-cursor-pointer;
+  @apply code-transition code-ease-in-out;
+  @apply code-font-sans code-font-bold code-text-base code-text-white;
+  @apply disabled:code-bg-primary-100 disabled:code-cursor-default;
+  @apply hover:code-bg-primary-600;
+  @apply focus:code-outline-none focus:code-ring focus:code-ring-opacity-50 focus:code-ring-primary;
+
+  &:disabled {
+    @apply code-pointer-events-none;
+  }
+
+  &.basic {
+    @apply code-border-0;
+    @apply code-bg-transparent;
+    @apply code-text-primary;
+    @apply hover:code-bg-primary-100;
+
+    &:disabled {
+      @apply code-text-primary-100;
+    }
+  }
+
+  &.stroked {
+    @apply code-border-2 code-border-primary code-border-solid;
+    @apply code-bg-white;
+    @apply code-text-primary;
+    @apply hover:code-bg-primary-100;
+
+    &:disabled {
+      @apply code-border-primary-100;
+      @apply code-text-primary-100;
+    }
+  }
+}

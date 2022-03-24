@@ -1,0 +1,8 @@
+{
+  "borderRadius": "0.625rem",
+  "colors": {
+    "primary": "#ff5c30",
+    "secondary": "#0e1e30",
+    "danger": "#ff1744"
+  }
+}
