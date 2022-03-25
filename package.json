@@ -1,0 +1,21 @@
+{
+  "name": "codemotion-ui",
+  "version": "1.0.0",
+  "description": "Web Components UI library developed with Angular and Stencil.js discussed as case study @ Codemotion 2022",
+  "scripts": {
+    "install:angular-from-library": "cd angular/from-library && npm install",
+    "install:angular-from-scratch": "cd angular/from-scratch && npm install",
+    "install:stencil": "cd stencil && npm install",
+    "install:all": "npm run install:angular-from-library && npm run install:angular-from-scratch && npm run install:stencil"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandro-pagliara/codemotion-ui.git"
+  },
+  "author": "Alessandro Pagliara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alessandro-pagliara/codemotion-ui/issues"
+  },
+  "homepage": "https://github.com/alessandro-pagliara/codemotion-ui#readme"
+}

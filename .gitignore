@@ -1,5 +1,7 @@
 # Compiled output
 */**/dist
+*/**/www
+*/**/loader
 
 # Node
 */**/node_modules
