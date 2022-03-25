@@ -15,8 +15,10 @@
   </a>
 
   <h2 align="center">Codemotion UI</h2>
+  <h3 align="center">powered by <a href="https://www.sideagroup.com/">Sidea Group</a></h3>
 
-  <p align="center">
+
+  <p align="center"><br>
     Web Components UI library developed with Angular and Stencil.js discussed as case study @<a href="https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-italian-edition-spring">Codemotion2022</a>.
     <br />
     <br />
