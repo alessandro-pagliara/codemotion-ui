@@ -49,6 +49,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <br />
@@ -132,7 +133,7 @@ Enter the `angular/from-library` path, then you can:
 - <strong>build</strong> the <em>components</em> project containing the Angular components library (optionally in <strong>watch mode</strong>)
 
   ```sh
-  npm run [start|build]:components
+  npm run {start|build}:components
   ```
 
   or
@@ -141,19 +142,19 @@ Enter the `angular/from-library` path, then you can:
   ng build --project components [--watch]
   ```
 
-- <strong>start / build</strong> the <em>elements</em> project through which convert all Angular components of the <em>components</em> library into Web Components (Custom Elements):
+- <strong>start / build</strong> the <em>elements</em> project through which convert all Angular components of the <em>components</em> library into Web Components (Custom Elements)
 
   ```sh
-  npm run [start|build]:elements
+  npm run {start|build}:elements
   ```
 
   or
 
   ```sh
-  ng [serve|build] --project elements
+  ng {serve|build} --project elements
   ```
 
-The build of the <em>elements</em> project will create 3 bundles in `dist/elements` folder:
+The build of the <em>elements</em> project will create <strong>3 bundles</strong> in `dist/elements` folder containing the production-ready Web Components version of the <em>components</em> library project.
 
 ```
 .
@@ -168,8 +169,6 @@ The build of the <em>elements</em> project will create 3 bundles in `dist/elemen
                                       ~ 167 kB
 ```
 
-containing the production-ready Web Components version of the <em>components</em> library project.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Angular (from scratch)
@@ -177,15 +176,18 @@ containing the production-ready Web Components version of the <em>components</em
 Enter the `angular/from-scratch` path, then you can:
 
 - <strong>start</strong> the project
+
   ```sh
   npm start
   ```
+
 - <strong>build</strong> the project
+
   ```sh
   npm run build
   ```
 
-The build will create 3 bundles in `dist` folder:
+The build will create <strong>3 bundles</strong> in `dist` folder containing the production-ready Web Components library.
 
 ```
 .
@@ -199,8 +201,6 @@ The build will create 3 bundles in `dist` folder:
                                       ~ 168 kB
 ```
 
-containing the production-ready Web Components library.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Stencil
@@ -208,15 +208,18 @@ containing the production-ready Web Components library.
 Enter the `stencil` path, then you can:
 
 - <strong>start</strong> the project
+
   ```sh
   npm start
   ```
+
 - <strong>build</strong> the project
+
   ```sh
   npm run build
   ```
 
-The build will create 6 bundles in `www/build` folder:
+The build will create <strong>6 bundles</strong> in `www/build` folder containing the production-ready Web Components library.
 
 ```
 .
@@ -232,8 +235,6 @@ The build will create 6 bundles in `www/build` folder:
 ------------------------------------------------
                                       ~ 51 kB
 ```
-
-containing the production-ready Web Components library.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
