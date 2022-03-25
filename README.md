@@ -143,13 +143,13 @@ Enter the `angular/from-library` path, then you can:
 
 - <strong>start / build</strong> the <em>elements</em> project through which convert all Angular components of the <em>components</em> library into Web Components (Custom Elements):
 
-  ```
+  ```sh
   npm run [start|build]:elements
   ```
 
   or
 
-  ```
+  ```sh
   ng [serve|build] --project elements
   ```
 
@@ -181,7 +181,7 @@ Enter the `angular/from-scratch` path, then you can:
   npm start
   ```
 - <strong>build</strong> the project
-  ```
+  ```sh
   npm run build
   ```
 
@@ -212,7 +212,7 @@ Enter the `stencil` path, then you can:
   npm start
   ```
 - <strong>build</strong> the project
-  ```
+  ```sh
   npm run build
   ```
 
