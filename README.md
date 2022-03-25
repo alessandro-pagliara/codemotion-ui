@@ -55,7 +55,7 @@
 <br />
 
 <div align="center">
-    <img src="images/gif.gif" style="border-radius:16px;overflow:hidden" alt="Logo" width="500">
+    <img src="images/gif.gif" alt="Logo" width="500">
 </div>
 
 <br />
