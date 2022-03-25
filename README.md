@@ -49,7 +49,6 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
-
 ## About The Project
 
 <br />
@@ -60,27 +59,27 @@
 
 <br />
 
-The project aims to compare Angular and Stencil as tools to create a library of <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a> to implement consistent Design Systems in a Microfrontend Architecture.
+The project aims to compare Angular and Stencil to create a library of <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components</a> useful to implement a consistent Design System (built on top of Tailwind CSS) in a Microfrontend Architecture.
 
-The case study consists in the creation of the UI components for a basic authentication micro-application.
+The case study consists in the creation of the UI components for a basic Auth Micro App.
 
-The project is organized in 3 folders:
+The project is organized in 3 main folders:
 
 ```
-/angular
- |__/from-library
- |__/from-scratch
-
-/stencil
+.
+├── angular               # Angular examples
+│   ├── from-library      # Web Components from APF library
+│   ├── from-scratch      # Web Components from scratch
+├── stencil               # Stencil example
 ```
-
-### Angular (from scratch)
-
-In `angular/from-scratch` path you will find an example of an empty Angular project useful to create a library of Web Components from scratch.
 
 ### Angular (from library)
 
 In `angular/from-library` path you will find an example of an existing Angular project using an <a href="https://angular.io/guide/angular-package-format">APF</a> components library that can be converted into a Web Components library.
+
+### Angular (from scratch)
+
+In `angular/from-scratch` path you will find an example of an empty Angular project useful to create a library of Web Components from scratch.
 
 ### Stencil
 
@@ -94,7 +93,7 @@ As described above, the project is built with:
 
 - [Angular](https://angular.io/)
 - [Stencil.js](https://stenciljs.com/)
-- [Tailwind](https://tailwindcss.com/) (the CSS framework on which the Design System is built)
+- [Tailwind](https://tailwindcss.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -118,34 +117,13 @@ As described above, the project is built with:
    ```sh
    npm run install:all
    ```
-   N.B: the module bundler `ng-packagr` has been patched in order to parse Tailwind directives, sorry ¯\\\_( ͡° ͜ʖ ͡°)\_/¯ (you can follow a feature request [here](https://github.com/ng-packagr/ng-packagr/issues/1943)).
+   N.B: `ng-packagr`, the default module bundler for Angular libraries, has been patched in order to parse Tailwind directives, sorry ¯\\\_( ͡° ͜ʖ ͡°)\_/¯ (you can follow a feature request [here](https://github.com/ng-packagr/ng-packagr/issues/1943)).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
-
-### Angular (from scratch)
-
-Enter the `angular/from-scratch` path, then you can:
-
-- <strong>start</strong> the project
-  ```sh
-  npm start
-  ```
-- <strong>build</strong> the project
-  ```
-  npm run build
-  ```
-
-The build will create 3 bundles in `dist` folder:
-
-- <strong>main.js</strong>
-- <strong>polyfills.js</strong>
-- <strong>runtime.js</strong>
-
-containing the production-ready Web Components library.
 
 ### Angular (from library)
 
@@ -163,7 +141,7 @@ Enter the `angular/from-library` path, then you can:
   ng build --project components [--watch]
   ```
 
-- <strong>start / build</strong> the <em>elements</em> project through which convert all Angular components of the <em>components</em> library into a Web Components (Custom Elements):
+- <strong>start / build</strong> the <em>elements</em> project through which convert all Angular components of the <em>components</em> library into Web Components (Custom Elements):
 
   ```
   npm run [start|build]:elements
@@ -177,11 +155,53 @@ Enter the `angular/from-library` path, then you can:
 
 The build of the <em>elements</em> project will create 3 bundles in `dist/elements` folder:
 
-- <strong>main.js</strong>
-- <strong>polyfills.js</strong>
-- <strong>runtime.js</strong>
+```
+.
+├── angular
+│   ├── from-library
+│   │   ├── dist
+│   │   │   ├── elements
+│   │   │   │   ├── main.js           # 166.2 kB
+│   │   │   │   ├── polyfills.js      # 114 byte
+│   │   │   │   ├── runtime.js        # 894 byte
+------------------------------------------------
+                                      ~ 167 kB
+```
 
 containing the production-ready Web Components version of the <em>components</em> library project.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Angular (from scratch)
+
+Enter the `angular/from-scratch` path, then you can:
+
+- <strong>start</strong> the project
+  ```sh
+  npm start
+  ```
+- <strong>build</strong> the project
+  ```
+  npm run build
+  ```
+
+The build will create 3 bundles in `dist` folder:
+
+```
+.
+├── angular
+│   ├── from-scratch
+│   │   ├── dist
+│   │   │   ├── main.js               # 166.9 kB
+│   │   │   ├── polyfills.js          # 124 byte
+│   │   │   ├── runtime.js            # 904 byte
+------------------------------------------------
+                                      ~ 168 kB
+```
+
+containing the production-ready Web Components library.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Stencil
 
@@ -198,12 +218,20 @@ Enter the `stencil` path, then you can:
 
 The build will create 6 bundles in `www/build` folder:
 
-- <strong>codemotion-ui.esm.js</strong>
-- <strong>codemotion-ui.js</strong>
-- <strong>index.esm.js</strong>
-- <strong>p-6844c6e0.js</strong>
-- <strong>p-d74d78a3.js</strong>
-- <strong>p-ef7ad497.entry.js</strong>
+```
+.
+├── stencil
+│   ├── www
+│   │   ├── build
+│   │   │   ├── codemotion-ui.esm.js  # 549 byte
+│   │   │   ├── codemotion-ui.js      # 5.2 kB
+│   │   │   ├── index.esm.js          # 0 byte
+│   │   │   ├── p-6844c6e0.js         # 8.2 kB
+│   │   │   ├── p-d74d78a3.js         # 6.4 kB
+│   │   │   ├── p-ef7ad497.entry.js   # 31 kB
+------------------------------------------------
+                                      ~ 51 kB
+```
 
 containing the production-ready Web Components library.
 
