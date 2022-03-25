@@ -11,13 +11,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/alessandro-pagliara/codemotion-ui">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="128" height="128">
   </a>
 
-  <h3 align="center">Codemotion UI</h3>
+  <h2 align="center">Codemotion UI</h2>
 
   <p align="center">
-    Web Components UI library developed with Angular and Stencil.js discussed as case study @ <a href="https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-italian-edition-spring">Codemotion 2022</a>.
+    Web Components UI library developed with Angular and Stencil.js discussed as case study @<a href="https://events.codemotion.com/conferences/online/2022/online-tech-conference-2022-italian-edition-spring">Codemotion2022</a>.
     <br />
     <br />
     <a href="https://github.com/alessandro-pagliara/codemotion-ui/issues">Report Bug</a>
